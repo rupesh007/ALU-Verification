@@ -1,0 +1,157 @@
+vlog -f compile_questa_sv.f
+# QuestaSim vlog 10.0b Compiler 2011.05 May  5 2011
+# -- Compiling package alu_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.0p1 Built-in)
+# ** Note: (vlog-2286) Using implicit +incdir+C:/questasim_10.0b/uvm-1.0p1/../verilog_src/uvm-1.0p1/src from import uvm_pkg
+# -- Compiling package agent_pkg
+# -- Importing package alu_pkg
+# -- Compiling interface alu_if
+# -- Compiling module top
+# -- Compiling module alu8
+# 
+# Top level modules:
+# 	top
+vsim -do "run -all" top
+# vsim -do {run -all} top 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.alu_pkg
+# Loading work.agent_pkg
+# Loading work.top(fast)
+# Loading work.alu_if(fast)
+# Loading work.alu8(fast)
+# Loading C:\questasim_10.0b\uvm-1.0p1\win32\uvm_dpi.dll
+# run -all 
+# ----------------------------------------------------------------
+# UVM-1.0p1 
+# (C) 2007-2011 Mentor Graphics Corporation
+# (C) 2007-2011 Cadence Design Systems, Inc.
+# (C) 2006-2011 Synopsys, Inc.
+# ----------------------------------------------------------------
+# UVM_INFO @ 0: reporter [RNTST] Running test ...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ------------------------------------------------------------------
+# Name                       Type                        Size  Value
+# ------------------------------------------------------------------
+# test case 1 for alu        alu_test                    -     @458 
+#   env_1                    alu_env                     -     @471 
+#     alu_agent              alu_agent                   -     @489 
+#       a_driver             alu_driver                  -     @653 
+#         d_port             uvm_analysis_port           -     @688 
+#         rsp_port           uvm_analysis_port           -     @668 
+#         sqr_pull_port      uvm_seq_item_pull_port      -     @660 
+#       a_monitor            agent_monitor               -     @676 
+#         am_port            uvm_analysis_port           -     @698 
+#       a_sequencer          alu_sequencer               -     @544 
+#         rsp_export         uvm_analysis_export         -     @551 
+#         seq_item_export    uvm_seq_item_pull_imp       -     @645 
+#         arbitration_queue  array                       0     -    
+#         lock_queue         array                       0     -    
+#         num_last_reqs      integral                    32    'd1  
+#         num_last_rsps      integral                    32    'd1  
+#       ag_port              uvm_analysis_port           -     @535 
+#     e_monitor              alu_monitor                 -     @496 
+#       aport                uvm_analysis_port           -     @714 
+#     e_subscriber           my_subscriber               -     @514 
+#       analysis_imp         uvm_analysis_imp            -     @521 
+#     env_analysis           my_scoreboard               -     @507 
+#       analysis_port1       uvm_analysis_export         -     @727 
+#       analysis_port2       uvm_analysis_export         -     @735 
+#       fifo_d               uvm_tlm_analysis_fifo #(T)  -     @743 
+#         analysis_export    uvm_analysis_imp            -     @782 
+#         get_ap             uvm_analysis_port           -     @774 
+#         get_peek_export    uvm_get_peek_imp            -     @758 
+#         put_ap             uvm_analysis_port           -     @766 
+#         put_export         uvm_put_imp                 -     @750 
+#       fifo_m               uvm_tlm_analysis_fifo #(T)  -     @790 
+#         analysis_export    uvm_analysis_imp            -     @829 
+#         get_ap             uvm_analysis_port           -     @821 
+#         get_peek_export    uvm_get_peek_imp            -     @805 
+#         put_ap             uvm_analysis_port           -     @813 
+#         put_export         uvm_put_imp                 -     @797 
+#       scb_subscriber       my_subscriber               -     @837 
+#         analysis_imp       uvm_analysis_imp            -     @844 
+# ------------------------------------------------------------------
+# 
+# DUT @ 30 operand_1=00000000 operand_2=00000000 op_code=0001 shift_rotate=000 result=00000000 carry = x
+# UVM_INFO my_scoreboard.sv(74) @ 30: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 50 will be: operand_1=10101100 operand_2=01001010 op_code=0010 shift_rotate=110
+# DUT @ 50 operand_1=10101100 operand_2=01001010 op_code=0010 shift_rotate=110 result=11101110 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 50: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 70 will be: operand_1=00000011 operand_2=10101000 op_code=0111 shift_rotate=101
+# DUT @ 70 operand_1=00000011 operand_2=10101000 op_code=0111 shift_rotate=101 result=01100000 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 70: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 90 will be: operand_1=11110100 operand_2=00101110 op_code=0100 shift_rotate=010
+# DUT @ 90 operand_1=11110100 operand_2=00101110 op_code=0100 shift_rotate=010 result=00100010 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 90: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 110 will be: operand_1=10010111 operand_2=10100010 op_code=0111 shift_rotate=011
+# DUT @ 110 operand_1=10010111 operand_2=10100010 op_code=0111 shift_rotate=011 result=10111000 carry = 1
+# UVM_INFO my_scoreboard.sv(74) @ 110: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 130 will be: operand_1=00001100 operand_2=11010010 op_code=0100 shift_rotate=100
+# DUT @ 130 operand_1=00001100 operand_2=11010010 op_code=0100 shift_rotate=100 result=11011110 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 130: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 150 will be: operand_1=11001001 operand_2=11011100 op_code=0101 shift_rotate=110
+# DUT @ 150 operand_1=11001001 operand_2=11011100 op_code=0101 shift_rotate=110 result=11101101 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 150: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 170 will be: operand_1=10011100 operand_2=11110000 op_code=0000 shift_rotate=101
+# DUT @ 170 operand_1=10011100 operand_2=11110000 op_code=0000 shift_rotate=101 result=zzzzzzzz carry = 1
+# UVM_INFO my_scoreboard.sv(78) @ 170: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result mismatch] Test: Failed!
+# Sequence item @ 190 will be: operand_1=11011100 operand_2=01000000 op_code=1001 shift_rotate=011
+# DUT @ 190 operand_1=11011100 operand_2=01000000 op_code=1001 shift_rotate=011 result=11100000 carry = z
+# UVM_INFO my_scoreboard.sv(74) @ 190: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 210 will be: operand_1=01011001 operand_2=10011110 op_code=0000 shift_rotate=100
+# DUT @ 210 operand_1=01011001 operand_2=10011110 op_code=0000 shift_rotate=100 result=zzzzzzzz carry = 0
+# UVM_INFO my_scoreboard.sv(78) @ 210: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result mismatch] Test: Failed!
+# Sequence item @ 230 will be: operand_1=01110101 operand_2=00001011 op_code=1001 shift_rotate=001
+# DUT @ 230 operand_1=01110101 operand_2=00001011 op_code=1001 shift_rotate=001 result=11101010 carry = z
+# UVM_INFO my_scoreboard.sv(74) @ 230: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 250 will be: operand_1=01011000 operand_2=10001000 op_code=0010 shift_rotate=010
+# DUT @ 250 operand_1=01011000 operand_2=10001000 op_code=0010 shift_rotate=010 result=11011000 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 250: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 270 will be: operand_1=01000111 operand_2=10000011 op_code=0010 shift_rotate=001
+# DUT @ 270 operand_1=01000111 operand_2=10000011 op_code=0010 shift_rotate=001 result=11000111 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 270: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 290 will be: operand_1=10100010 operand_2=00001100 op_code=0001 shift_rotate=101
+# DUT @ 290 operand_1=10100010 operand_2=00001100 op_code=0001 shift_rotate=101 result=00000000 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 290: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 310 will be: operand_1=01001001 operand_2=10010011 op_code=0010 shift_rotate=011
+# DUT @ 310 operand_1=01001001 operand_2=10010011 op_code=0010 shift_rotate=011 result=11011011 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 310: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 330 will be: operand_1=10110100 operand_2=10000000 op_code=0110 shift_rotate=011
+# DUT @ 330 operand_1=10110100 operand_2=10000000 op_code=0110 shift_rotate=011 result=00010110 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 330: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 350 will be: operand_1=01110110 operand_2=11000110 op_code=1000 shift_rotate=101
+# DUT @ 350 operand_1=01110110 operand_2=11000110 op_code=1000 shift_rotate=101 result=00000011 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 350: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 370 will be: operand_1=10111111 operand_2=10110111 op_code=0000 shift_rotate=101
+# DUT @ 370 operand_1=10111111 operand_2=10110111 op_code=0000 shift_rotate=101 result=zzzzzzzz carry = 0
+# UVM_INFO my_scoreboard.sv(78) @ 370: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result mismatch] Test: Failed!
+# Sequence item @ 390 will be: operand_1=10110001 operand_2=00101111 op_code=0101 shift_rotate=111
+# DUT @ 390 operand_1=10110001 operand_2=00101111 op_code=0101 shift_rotate=111 result=10000010 carry = z
+# UVM_INFO my_scoreboard.sv(74) @ 390: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 410 will be: operand_1=01000001 operand_2=00111111 op_code=0110 shift_rotate=110
+# DUT @ 410 operand_1=01000001 operand_2=00111111 op_code=0110 shift_rotate=110 result=00000001 carry = 0
+# UVM_INFO my_scoreboard.sv(74) @ 410: test case 1 for alu.env_1.env_analysis [Predictor result and DUT result matched] Test: OK!
+# Sequence item @ 430 will be: operand_1=11101000 operand_2=10100011 op_code=0000 shift_rotate=111
+# UVM_INFO verilog_src/uvm-1.0p1/src/base/uvm_objection.svh(1116) @ 410: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# REQ Coverage_1: covered = 8, total = 20 (41.67%)
+# REQ Coverage_1: covered = 8, total = 20 (41.67%)
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   23
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Predictor result and DUT result matched]    17
+# [Predictor result and DUT result mismatch]     3
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : C:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_root.svh(392)
+#    Time: 410 ns  Iteration: 54  Instance: /top
+# 1
+# Break at C:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_root.svh line 392
